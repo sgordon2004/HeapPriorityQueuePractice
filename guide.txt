@@ -1,0 +1,15 @@
+Create a priority queue to store the information for coats at a store. You must implement it as a heap.
+
+Each coat will have a price and a designer associated with them.
+You must have the following:
+1 ) A header file called “pq.h” which includes
+a ) a coat struct with price and designer variables
+b ) a function prototype to add coats to a priority queue
+c ) a function prototype to access the most expensive coat in the priority queue
+d ) a function prototype to delete the most expensive coat from the priority queue
+Note: you may also add any additional functions you would like but they are not necessary
+2 ) An implementation file called “pq.cpp” with the functions definitions for all functions created in list.h
+3 ) A client file called “client.cpp” which does the following
+a ) Ask the user for the information for a coat until the user tells you to stop
+b ) Add the coat’s information to the priority queue
+c ) Print the information for the 3 most expensive coats
