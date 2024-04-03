@@ -5,7 +5,13 @@ struct Coat
 {
     double price;
     std::string designer;
+
+    bool operator==(const Coat& other) const
+    {
+        return (price == other.price) && (designer == other.designer);
+    }
 };
+
 
 // Heap class
 class Heap
@@ -22,8 +28,9 @@ class Heap
         int findIndex(Coat x); // functino to find index of an element
     public: // accessible outside of class
         Heap(); // class constructor
-        void insert(int p); // inserts into array
+        void insert(Coat c); // inserts into array
         double peek(); // returns most expensive coat in array
         double remove(); // removes most expensive coat from array
         void print_heap(); // prints out entire heap
 };
+

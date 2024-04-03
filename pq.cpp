@@ -32,9 +32,9 @@ int Heap::right(int i)
 // swap spots of two given values
 void Heap::swap(Coat a, Coat b)
 {
-    double temp = a.price; // temporary variable to store value
-    a.price = b.price;
-    b.price = temp;
+    Coat temp = a; // temporary variable to store value
+    a = b;
+    b = temp;
 }
 
 // bubbles given item to correct spot in array
@@ -68,6 +68,14 @@ double Heap::remove()
     size--; // decrement size of array by 1
     heapify(H[0]);
     return result;
+}
+
+void Heap::insert(Coat c)
+{
+    size ++; // increment size of array
+    H[size] = c; // inserting coat obbject into last place in array
+
+    shiftUp(size); // bubble new element up to proper position
 }
 
 // function to find the index of rooti
